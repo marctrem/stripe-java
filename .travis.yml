@@ -5,10 +5,11 @@ jdk:
   - oraclejdk7
   - oraclejdk8
 
-install: mvn install -Dgpg.skip=true -DskipTests
-
 notifications:
   email:
     on_success: never
 
 sudo: false
+
+script:
+  - ./gradlew clean test
